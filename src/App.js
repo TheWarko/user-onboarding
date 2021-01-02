@@ -1,10 +1,11 @@
 
 import React from 'react'
 
-import stylesButton from './assets/styles/Button.module.scss'
 import stylesBase from './assets/styles/Base.module.scss'
 
 import Sidebar from './components/Sidebar'
+import Main from './components/Main'
+
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
 
       <div className={stylesBase.container}>
         <Sidebar />
-        <div className={stylesBase.main}>
-          <a className={stylesButton.button} >Ciao Mondo!</a>
-        </div>
+        <Main />
       </div>       
 
     </div>

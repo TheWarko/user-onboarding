@@ -11,9 +11,11 @@ import stylesSpacing from '../assets/styles/Spacing.module.scss'
 const Sidebar = () => {
     return (
         <div className={stylesSidebar.sidebar} >
-            <h1 className={`${stylesText.twocolors} ${stylesSpacing.mb200}`} >UNITED<span>PROPERTIES</span></h1>
-            <Checklist mb={stylesSpacing.mb64} />
-            <Quotes />
+            <div className={stylesSidebar.container} >
+                <h1 className={`${stylesText.twocolors} ${stylesSpacing.mb200}`} >UNITED<span>PROPERTIES</span></h1>
+                <Checklist mb={stylesSpacing.mb64} />
+                <Quotes />
+            </div>
         </div>
     )
 }

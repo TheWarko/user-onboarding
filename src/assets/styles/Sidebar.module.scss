@@ -5,9 +5,11 @@
     width: 100%;
     background-color: #4c9ff1;
     color: #fff;
-    padding: 20px;
-    @media only screen and (min-width: 660px){
-        padding: 20px 40px;
+    .container{
+        padding: 20px;
+        @media only screen and (min-width: 660px){
+            padding: 20px 40px;
+        }
     }
 }
 
