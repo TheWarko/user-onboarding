@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Remove padding on react-flexbox-grid .container */
+.container{
+  padding: 0 !important;
+}

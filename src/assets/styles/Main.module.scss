@@ -7,5 +7,8 @@
 }
 
 .container{
-    padding: 100px;
+    padding: 20px;
+    @media only screen and (min-width: 660px){
+        padding: 8vw;
+    }
 }
