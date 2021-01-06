@@ -1,0 +1,8 @@
+.headbar{
+    $marginbottom : 64;
+        $smallspacer : 0.75;
+        $mediumspacer : 0.90;
+        margin-bottom: $marginbottom * $smallspacer + px;
+        @media (min-width: 667px) {margin-bottom: $marginbottom * $mediumspacer + px}
+        @media (min-width: 1024px) {margin-bottom: $marginbottom + px}
+}
