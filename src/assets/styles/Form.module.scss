@@ -1,3 +1,6 @@
+@import './_config.scss';
+
+
 .form{
     label{
         font-size: 14px;
@@ -13,11 +16,6 @@
         border-bottom: 2px solid #D5D9DC;
         color: #000;
         font-size: 21px;
-
-        // &:focus{
-        //     border-bottom: 2px solid #4c9ff1;
-        // }
-
     }
 
     .col-xs:focus-within{
@@ -26,7 +24,11 @@
     }
 
     .fields{
-        margin-bottom: 48px;
+        &> div { 
+            margin-bottom: 48 * $smallspacer + px;
+            @include medium{margin-bottom: 48 * $mediumspacer + px}
+            @include large{margin-bottom: 48px}
+        }
         & >div:focus-within{
             label{color: #4c9ff1;}
             input,select{border-bottom: 2px solid #4c9ff1;}

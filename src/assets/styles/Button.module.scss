@@ -1,7 +1,8 @@
+@import './_config.scss';
+
 
 body{
-    .button{
-        background-color: #4c9ff1;
+    .defaultbutton{
         height: 40px;
         line-height: 40px;
         display: block;
@@ -10,10 +11,28 @@ body{
         text-align: center;
         padding: 0 20px;
         text-decoration: none;
-        color: #fff;
         width: 80px;
         border-radius: 3px;
         border: 0;
         outline: 0;
+        cursor: pointer;
     }
+    .button{
+        @extend .defaultbutton;
+        color: #fff;
+        background-color: #4c9ff1;
+        &:hover{
+            background-color: darken(#4c9ff1,2%);
+        }
+    }
+    .buttonLight{
+        @extend .defaultbutton;
+        color: #4c9ff1;
+        background-color: #edf5fe;
+        &:hover{
+            background-color: darken(#edf5fe,1%);
+        }
+    }
+
+
 }

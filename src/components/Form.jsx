@@ -6,10 +6,11 @@ import stylesSpacing from '../assets/styles/Spacing.module.scss'
 
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import Titletext from './Titletext'
+import Arrowlink from './Arrowlink'
 
 
 
-const Form = () => {
+const Form = (props) => {
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
@@ -18,7 +19,7 @@ const Form = () => {
         <div>
             <Titletext className={stylesSpacing.mb48} />
 
-            <form onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
+            <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
                 <Grid>
                     <Row className={stylesForm.fields} >
                         <Col xs={12} md={6}>
@@ -54,10 +55,10 @@ const Form = () => {
                         </Col>
                     </Row>
                 </Grid>
-                <input type="submit" value="Next" className={stylesButton.button} />
             </form>
 
-            <Titletext className={stylesSpacing.mb48} />
+            <Titletext className={stylesSpacing.mb16} />
+            <Arrowlink next />
 
         </div>
     )
