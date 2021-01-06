@@ -12,3 +12,14 @@
     color: #000;
     margin-bottom: 16px;
 }
+
+:global {
+    .alignLeft{text-align: left;}
+    .alignRight{text-align: right;}
+    .alignLeftOnlyDesktop{
+        @media (min-width: 667px) {text-align: left;}
+    }
+    .alignRightOnlyDesktop{
+        @media (min-width: 667px) {text-align: right;}
+    }
+}

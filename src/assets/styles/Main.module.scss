@@ -1,3 +1,5 @@
+@import './_config.scss';
+
 
 .main{
     grid-area: main;
@@ -8,7 +10,13 @@
 
 .container{
     padding: 20px;
-    @media only screen and (min-width: 660px){
-        padding: 8vw;
+    @include medium{ 
+        // padding: 26px 8vw; 
+        padding: 3.5vh 8vw;
+        display: grid;
+        grid-template-columns: 100%;
+        // grid-template-rows: 10vh 80vh 10vh;
+        grid-template-rows: 12vh 75vh 6vh;
+        // grid-template-rows: 12vh auto 6vh;
     }
 }

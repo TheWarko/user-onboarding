@@ -12,9 +12,9 @@ const Sidebar = () => {
     return (
         <div className={stylesSidebar.sidebar} >
             <div className={stylesSidebar.container} >
-                <h1 className={`${stylesText.twocolors} ${stylesSpacing.mb192}`} >UNITED<span>PROPERTIES</span></h1>
-                <Checklist mb={stylesSpacing.mb80} />
-                <Quotes />
+                <h1 className={`${stylesText.twocolors}`} >UNITED<span>PROPERTIES</span></h1>
+                <Checklist />
+                <Quotes className={stylesSidebar.sidebar__quotes} />
             </div>
         </div>
     )

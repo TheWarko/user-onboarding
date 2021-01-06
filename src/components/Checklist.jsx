@@ -30,7 +30,7 @@ const Checklist = (props) => {
     const [step,setStep] = useState(1)
 
     return (
-        <ul className={`${stylesChecklist.checklist} ${props.mb}`} >
+        <ul className={`${stylesChecklist.checklist} ${props.className}`} >
             { props.items.map((el,i) => <ChecklistItem key={i} label={el} lastOne={props.items.length == i+1} /> ) }
         </ul>
     )

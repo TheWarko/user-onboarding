@@ -9,7 +9,7 @@ import imgBrandlogo from '../assets/icons/up.svg'
 
 const Quotes = (props) => {
     return (
-        <div>
+        <div className={props.className}>
             <div className={styleQuotes.box} >
                 <div className={styleQuotes.quotationmarks}>
                     <img src={imgQuotemarks} alt="quotes marks" />
