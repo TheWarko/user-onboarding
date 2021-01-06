@@ -1,12 +1,13 @@
-import React,{ useState } from 'react'
-
-//styles
+import { useContext } from 'react'
+import StepContext from '../contexts/StepContext'
+//Styles
 import stylesChecklist from '../assets/styles/Checklist.module.scss'
+
 
 const ChecklistItem = (props) => {
     return (
         //ToDo: shown class active will be depends on step status
-        <li className={stylesChecklist.active} >    
+        <li className={props.active ? stylesChecklist.active : ''} >    
             <div>
                 <span className={stylesChecklist.checkboxWrapper}>
                     <span className={stylesChecklist.checkbox} >
@@ -27,11 +28,11 @@ const ChecklistItem = (props) => {
 
 const Checklist = (props) => {
 
-    const [step,setStep] = useState(1)
+    const [step] = useContext(StepContext);
 
     return (
         <ul className={`${stylesChecklist.checklist} ${props.className}`} >
-            { props.items.map((el,i) => <ChecklistItem key={i} label={el} lastOne={props.items.length == i+1} /> ) }
+            { props.items.map((el,i) => <ChecklistItem key={i} label={el} lastOne={props.items.length === i+1} active={i+1 <= step ? true : false} /> ) }
         </ul>
     )
 }
