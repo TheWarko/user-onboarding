@@ -1,6 +1,6 @@
-import React from 'react'
-
+//Styles
 import stylesArrowlink from '../assets/styles/Arrowlink.module.scss'
+
 
 const Arrowlink = (props) => {
     return (

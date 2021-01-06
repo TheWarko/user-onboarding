@@ -1,10 +1,8 @@
-import React from 'react'
-
+//Styles
 import styleQuotes from '../assets/styles/Quotes.module.scss'
-
+//Media
 import imgQuotemarks from '../assets/icons/quotationmarks.svg'
 import imgBrandlogo from '../assets/icons/up.svg'
-
 
 
 const Quotes = (props) => {

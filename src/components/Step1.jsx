@@ -1,18 +1,16 @@
-import React from 'react'
 import { useForm } from "react-hook-form"
-import stylesButton from '../assets/styles/Button.module.scss'
+import { Grid, Row, Col } from 'react-flexbox-grid'
+//Styles
 import stylesForm from '../assets/styles/Form.module.scss'
 import stylesSpacing from '../assets/styles/Spacing.module.scss'
-
-import { Grid, Row, Col } from 'react-flexbox-grid'
+//Components
 import Titletext from './Titletext'
 import Arrowlink from './Arrowlink'
 
 
+const Step1 = (props) => {
 
-const Form = (props) => {
-
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => console.log(data);
 
     return (
@@ -64,4 +62,4 @@ const Form = (props) => {
     )
 }
 
-export default Form
+export default Step1

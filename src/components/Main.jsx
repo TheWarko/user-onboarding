@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
-
+//Styles
 import stylesMain from '../assets/styles/Main.module.scss'
+//Components
 import Headbar from './Headbar'
-import Form from './Form'
+import Step1 from './Step1'
 import Navbar from './Navbar'
 
 
@@ -12,7 +12,7 @@ const Main = () => {
         <div className={stylesMain.main}>
             <div className={stylesMain.container}>
                 <Headbar />
-                <Form />
+                <Step1 />
                 <Navbar />
             </div>
         </div>

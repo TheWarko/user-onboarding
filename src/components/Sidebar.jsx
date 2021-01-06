@@ -1,11 +1,9 @@
-import React from 'react'
-
-import Checklist from './Checklist'
-import Quotes from './Quotes'
-
+//Styles
 import stylesText from '../assets/styles/Text.module.scss'
 import stylesSidebar from '../assets/styles/Sidebar.module.scss'
-import stylesSpacing from '../assets/styles/Spacing.module.scss'
+//Components
+import Checklist from './Checklist'
+import Quotes from './Quotes'
 
 
 const Sidebar = () => {

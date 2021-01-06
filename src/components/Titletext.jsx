@@ -1,5 +1,4 @@
-import React from 'react'
-
+//Styles
 import stylesText from '../assets/styles/Text.module.scss'
 
 
