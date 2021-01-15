@@ -33,7 +33,7 @@ const Step1 = (props) => {
 
     return (
         <div>
-            <Titletext className={stylesSpacing.mb48} title={texts.contact.title} text={texts.contact.intro} />
+            <Titletext className={stylesSpacing.mb48} title={texts.invesmentpreferences.title} text={texts.invesmentpreferences.intro} />
 
             <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
                 <Grid>

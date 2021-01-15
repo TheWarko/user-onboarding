@@ -11,22 +11,29 @@ const Navbar = (props) => {
 
     const [step,setStep] = useContext(StepContext);
 
-    const next = () => {
+    const nextStep = () => {
         if(step < 3) {
             setStep(step + 1);
         }else{
             alert('Finish!');
         }
     }
+    const prevStep = () => {
+        if(step > 1) {
+            setStep(step - 1);
+        }else{
+            alert('Back to the homepage!');
+        }
+    }
 
     return (
         <div className={stylesNavbar.navbar}>
             <div className={stylesNavbar.navbar__left}>
-                <Arrowlink prev />
+                <Arrowlink prev onClick={prevStep} />
             </div>
             <div className={stylesNavbar.navbar__right}>
-                <button className={stylesButton.buttonLight}>Skip for now</button>
-                <button onClick={next} className={stylesButton.button} form="hook-form" >Next step →</button>
+                <button className={stylesButton.buttonLight} onClick={nextStep} >Skip for now</button>
+                <button className={stylesButton.button} form="hook-form" >Next step →</button>
             </div>
         </div>
     )
