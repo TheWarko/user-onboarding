@@ -1,7 +1,8 @@
-import {useContext} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import StepContext from '../contexts/StepContext'
 import { useForm } from "react-hook-form"
 import { Grid, Row, Col } from 'react-flexbox-grid'
+import axios from 'axios'
 //Styles
 import stylesForm from '../assets/styles/Form.module.scss'
 import stylesSpacing from '../assets/styles/Spacing.module.scss'
@@ -13,6 +14,12 @@ import texts from '../texts/texts'
 
 
 const Step1 = (props) => {
+
+    const [datas,setDatas] = useState({})
+
+    useEffect(() => {
+        setDatas(JSON.parse(localStorage.getItem('data')))
+    },[]);
 
     // Steps Context
     const [step,setStep] = useContext(StepContext);
@@ -27,8 +34,17 @@ const Step1 = (props) => {
     // Form
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        console.log(data);
-        nextStep()
+        axios.post('https://39514a2a-e250-4099-bb82-716528b652b1.mock.pstmn.io/users/add', {    //Postman mock API
+            data
+        })
+        .then(function (response) {
+            console.log(response);
+            localStorage.setItem('data', JSON.stringify(data));
+            nextStep()
+        })
+          .catch(function (error) {
+            console.log(error);
+        });
     }
 
     return (
@@ -42,26 +58,26 @@ const Step1 = (props) => {
                     <Row className={stylesForm.fields} >
                         <Col xs={12} md={6}>
                             <label htmlFor="fullname">Full name</label>
-                            <input name="fullname" ref={register({ required: true })} />
+                            <input name="fullname" defaultValue={datas ? datas.fullname : ''} ref={register({ required: true })} />
                             <span className={stylesForm.error}>{errors.fullname && "Full name is required"}</span>
                         </Col>
                         <Col xs={12} md={6}>
                             <label htmlFor="phone">Phone</label>
-                            <input type="tel" name="phone" ref={register({ required: true, pattern: /^[0-9]*$/ })} />
+                            <input type="tel" name="phone" defaultValue={datas ? datas.phone : ''}  ref={register({ required: true, pattern: /^[0-9]*$/ })} />
                             <span className={stylesForm.error}>{errors.phone && "Phone is required and accepts only numbers"}</span>
                         </Col>
                     </Row>
                     <Row className={stylesForm.fields} >
                         <Col xs>
                             <label htmlFor="email">E-mail address</label>
-                            <input type="email" name="email" ref={register({ required: true })} />
+                            <input type="email" name="email" defaultValue={datas ? datas.email : ''}  ref={register({ required: true })} />
                             <span className={stylesForm.error}>{errors.email && "Email is required"}</span>
                         </Col>
                     </Row>
                     <Row className={stylesForm.fields} >
                         <Col xs>
                             <label htmlFor="country">Country</label>
-                            <select name="country" ref={register({ required: true })} >
+                            <select name="country" defaultValue={datas ? datas.country : ''} ref={register({ required: true })} >
                                 <option value=""></option>    
                                 <option value="Italy">Italy</option>    
                                 <option value="England">England</option>    
