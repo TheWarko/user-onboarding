@@ -13,11 +13,11 @@ const Quotes = (props) => {
                     <img src={imgQuotemarks} alt="quotes marks" />
                 </div>
 
-                <p className={styleQuotes.text}>{props.items[0].text}</p>
+                <p className={styleQuotes.text}>{props.text}</p>
                 <div className={styleQuotes.flexContainer}>
                     <div className={styleQuotes.sign}>
-                        <p className={styleQuotes.signWho}>{props.items[0].signWho}</p>
-                        <p className={styleQuotes.signRole}>{props.items[0].signRole}</p>
+                        <p className={styleQuotes.signWho}>{props.signWho}</p>
+                        <p className={styleQuotes.signRole}>{props.signRole}</p>
                     </div>
                     <div className={styleQuotes.brandlogo}><img src={imgBrandlogo} alt="brand logo" /></div>
                 </div>

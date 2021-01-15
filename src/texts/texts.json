@@ -1,0 +1,39 @@
+{
+    "app": {
+        "name": "UNITED PROPERTIES"
+    },
+    "contact": {
+        "title": "Contact details",
+        "intro": "Welcome to United Properties, we are glad to see you! Let’s get started by letting us know a little bit about you",
+        "privacy_title": "Privacy policy",
+        "privacy_text": "We know you care about how your personal information is used and shared, so we take your privacy seriously",
+        "privacy_cta": "Expand privacy policy",
+        "privacy_link": "http://www.loremipsumdolor.sit"
+    },
+    "invesmentplans": {
+        "title": "Investment plans",
+        "intro": "Let us know about your investment plans. This will help us get you to the right expert who will help you further"
+    },
+    "invesmentpreferences": {
+        "title": "Investment preferences",
+        "intro": "This will help us figure out what your investment options are so that we can show you only possibly intresting for you deals"
+    },
+    "quotes": {
+        "1": {
+            "text": "We care about your time, that's why we created a 3-stage onboarding that will not take more than 5 minutes to complete",
+            "signWho": "William Mac",
+            "signRole": "CO-FOUNDER, INVESTOR"
+        },
+        "2": {
+            "text": "Save from thousands to millions on your deal. Secure the best possible. And get independent, unbiased advice for free",
+            "signWho": "Jodie Sears",
+            "signRole": "UNITEDPROPERTIES’ AGENT"
+        },
+        "3": {
+            "text": "United Properties is about fast & easy searching, buying, selling and investing ever — online, with an expert by our side",
+            "signWho": "Ollie Mcmahon",
+            "signRole": "MANAGING DIRECTOR"
+        }
+    }
+
+}
