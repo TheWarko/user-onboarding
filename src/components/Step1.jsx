@@ -74,7 +74,7 @@ const Step1 = (props) => {
             </form>
 
             <Titletext className={stylesSpacing.mb16} />
-            <Arrowlink next />
+            <Arrowlink next >Expand privacy policy</Arrowlink>
 
         </div>
     )

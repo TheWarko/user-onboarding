@@ -29,7 +29,7 @@ const Navbar = (props) => {
     return (
         <div className={stylesNavbar.navbar}>
             <div className={stylesNavbar.navbar__left}>
-                <Arrowlink prev onClick={prevStep} />
+                <Arrowlink prev onClick={prevStep} >Back to the Homepage</Arrowlink>
             </div>
             <div className={stylesNavbar.navbar__right}>
                 <button className={stylesButton.buttonLight} onClick={nextStep} >Skip for now</button>

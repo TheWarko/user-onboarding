@@ -20,7 +20,7 @@ const Headbar = (props) => {
                         STEP {step} OF 3
                     </Col>
                     <Col xs={12} lg={7} className="alignRightOnlyDesktop" >
-                        Lost or have trouble? <Arrowlink next />
+                        Lost or have trouble? <Arrowlink next >Get help</Arrowlink>
                     </Col>
                 </Row>
             </Grid>
