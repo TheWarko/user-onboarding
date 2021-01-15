@@ -33,7 +33,9 @@ const Step1 = (props) => {
 
     return (
         <div>
-            <Titletext className={stylesSpacing.mb48} title={texts.invesmentpreferences.title} text={texts.invesmentpreferences.intro} />
+            <Titletext className={stylesSpacing.mb48} title={texts.contact.title} >
+                {texts.invesmentpreferences.intro}
+            </Titletext>
 
             <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
                 <Grid>
@@ -72,9 +74,6 @@ const Step1 = (props) => {
                     </Row>
                 </Grid>
             </form>
-
-            <Titletext className={stylesSpacing.mb16} />
-            <Arrowlink next />
 
         </div>
     )
