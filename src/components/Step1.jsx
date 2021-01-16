@@ -58,7 +58,7 @@ const Step1 = (props) => {
                     <Row className={stylesForm.fields} >
                         <Col xs={12} md={6}>
                             <label htmlFor="fullname">Full name</label>
-                            <input name="fullname" defaultValue={datas ? datas.fullname : ''} ref={register({ required: true })} />
+                            <input type="text" name="fullname" defaultValue={datas ? datas.fullname : ''} ref={register({ required: true })} />
                             <span className={stylesForm.error}>{errors.fullname && "Full name is required"}</span>
                         </Col>
                         <Col xs={12} md={6}>

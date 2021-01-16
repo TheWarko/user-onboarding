@@ -5,9 +5,10 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 //Styles
 import stylesForm from '../assets/styles/Form.module.scss'
 import stylesSpacing from '../assets/styles/Spacing.module.scss'
+import stylesText from '../assets/styles/Text.module.scss'
 //Components
 import Titletext from './Titletext'
-import Arrowlink from './Arrowlink'
+import CheckboxBox from './CheckboxBox'
 //Texts
 import texts from '../texts/texts'
 
@@ -33,43 +34,43 @@ const Step1 = (props) => {
 
     return (
         <div>
-            <Titletext className={stylesSpacing.mb48} title={texts.contact.title} >
+            <Titletext className={stylesSpacing.mb48} title={texts.invesmentpreferences.title} >
                 {texts.invesmentpreferences.intro}
             </Titletext>
 
             <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
                 <Grid>
-                    <Row className={stylesForm.fields} >
-                        <Col xs={12} md={6}>
-                            <label htmlFor="fullname">Full name</label>
-                            <input name="fullname" ref={register({ required: true })} />
-                            <span className={stylesForm.error}>{errors.fullname && "Full name is required"}</span>
-                        </Col>
-                        <Col xs={12} md={6}>
-                            <label htmlFor="phone">Phone</label>
-                            <input type="tel" name="phone" ref={register({ required: true, pattern: /^[0-9]*$/ })} />
-                            <span className={stylesForm.error}>{errors.phone && "Phone is required and accepts only numbers"}</span>
+                    <Row>
+                        <Col xs>
+                            <p className={stylesText.stegosaurus} >What kind of real estate are you interested in?</p>
                         </Col>
                     </Row>
                     <Row className={stylesForm.fields} >
-                        <Col xs>
-                            <label htmlFor="email">E-mail address</label>
-                            <input type="email" name="email" ref={register({ required: true })} />
-                            <span className={stylesForm.error}>{errors.email && "Email is required"}</span>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="single_family" id="single_family" register={register} >Single family</CheckboxBox>
+                        </Col>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="residential_multifamily" id="residential_multifamily" register={register} >Residential multifamily</CheckboxBox>
+                        </Col>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="commercial_retail" id="commercial_retail" register={register} >Commercial retail</CheckboxBox>
+                        </Col>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="commercial_industrial" id="commercial_industrial" register={register} >Commercial industrial</CheckboxBox>
                         </Col>
                     </Row>
                     <Row className={stylesForm.fields} >
-                        <Col xs>
-                            <label htmlFor="country">Country</label>
-                            <select name="country" ref={register({ required: true })} >
-                                <option value=""></option>    
-                                <option value="Italy">Italy</option>    
-                                <option value="England">England</option>    
-                                <option value="France">France</option>   
-                                <option value="Germany">Germany</option>     
-                                <option value="Spanish">Spanish</option>    
-                            </select>
-                            <span className={stylesForm.error}>{errors.country && "Country is required"}</span>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="commercial_hospitality" id="commercial_hospitality" register={register} >Commercial hospitality</CheckboxBox>
+                        </Col>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="commercial_warehousing" id="commercial_warehousing" register={register} >Commercial warehousing</CheckboxBox>
+                        </Col>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="commercial_office" id="commercial_office" register={register} >Commercial office</CheckboxBox>
+                        </Col>
+                        <Col xs={3} md={3}>
+                            <CheckboxBox name="preferences" value="other" id="other" register={register} >Other</CheckboxBox>
                         </Col>
                     </Row>
                 </Grid>
