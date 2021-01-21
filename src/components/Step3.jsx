@@ -47,32 +47,33 @@ const Step1 = (props) => {
                     </Row>
                     <Row className={stylesForm.fields} >
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="single_family" id="single_family" register={register} >Single family</CheckboxBox>
+                            <CheckboxBox name="preferences" value="single_family" id="single_family" register={register({ validate: v => v.length > 0 })}>Single family</CheckboxBox>
                         </Col>
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="residential_multifamily" id="residential_multifamily" register={register} >Residential multifamily</CheckboxBox>
+                            <CheckboxBox name="preferences" value="residential_multifamily" id="residential_multifamily" register={register({ validate: v => v.length > 0 })}>Residential multifamily</CheckboxBox>
                         </Col>
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="commercial_retail" id="commercial_retail" register={register} >Commercial retail</CheckboxBox>
+                            <CheckboxBox name="preferences" value="commercial_retail" id="commercial_retail" register={register({ validate: v => v.length > 0 })}>Commercial retail</CheckboxBox>
                         </Col>
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="commercial_industrial" id="commercial_industrial" register={register} >Commercial industrial</CheckboxBox>
+                            <CheckboxBox name="preferences" value="commercial_industrial" id="commercial_industrial" register={register({ validate: v => v.length > 0 })}>Commercial industrial</CheckboxBox>
                         </Col>
                     </Row>
                     <Row className={stylesForm.fields} >
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="commercial_hospitality" id="commercial_hospitality" register={register} >Commercial hospitality</CheckboxBox>
+                            <CheckboxBox name="preferences" value="commercial_hospitality" id="commercial_hospitality" register={register({ validate: v => v.length > 0 })}>Commercial hospitality</CheckboxBox>
                         </Col>
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="commercial_warehousing" id="commercial_warehousing" register={register} >Commercial warehousing</CheckboxBox>
+                            <CheckboxBox name="preferences" value="commercial_warehousing" id="commercial_warehousing" register={register({ validate: v => v.length > 0 })}>Commercial warehousing</CheckboxBox>
                         </Col>
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="commercial_office" id="commercial_office" register={register} >Commercial office</CheckboxBox>
+                            <CheckboxBox name="preferences" value="commercial_office" id="commercial_office" register={register({ validate: v => v.length > 0 })}>Commercial office</CheckboxBox>
                         </Col>
                         <Col xs={3} md={3}>
-                            <CheckboxBox name="preferences" value="other" id="other" register={register} >Other</CheckboxBox>
+                            <CheckboxBox name="preferences" value="other" id="other" register={register({ validate: v => v.length > 0 })}>Other</CheckboxBox>
                         </Col>
                     </Row>
+                    <p className={stylesForm.error}>{errors.preferences && "At least one prefererence is required"}</p>
                 </Grid>
             </form>
 
