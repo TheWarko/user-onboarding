@@ -3,10 +3,12 @@
 A simple project to learn and improve my javascript with ReactJs.\
 Libraries and Plugins used:
 * create-react-app
-* axios
 * node-sass
+* css-modules
 * react-flexbox-grid
 * react-hook-form
+* axios
+* postman mock API
 
 <br />
 <br />
