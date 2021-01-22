@@ -1,7 +1,6 @@
-import {useRef} from 'react'
+// import {useRef} from 'react'
 //Styles
 import stylesCheckboxbox from '../assets/styles/CheckboxBox.module.scss'
-import stylesForm from '../assets/styles/Form.module.scss'
 
 
 const CheckboxBox = ({ id, children, register, ...inputProps }) => {
