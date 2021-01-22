@@ -11,18 +11,18 @@ const PriceBar = (props) => {
         end
     } = props
 
-    const points = [10000,50000,100000,200000,500000,1000000]
+    const [points] = useState([10000,50000,100000,200000,500000,1000000])
     const [startBar,setStartBar] = useState(0)
     const [endBar,setEndBar] = useState(0)
 
     useEffect(() => {
         setStartBar(0)
         points.forEach((point,i) => {if(start >= point) { setStartBar(i) }} )
-    },[start]);
+    },[start,points]);
     useEffect(() => {
         setEndBar(0)
         points.forEach((point,i) => {if(end >= point) { setEndBar(i) }} )
-    },[end]);
+    },[end,points]);
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -45,7 +45,7 @@ const PriceBar = (props) => {
             </div>
             <div>
             <div className={stylesPriceBar.labels}>
-                {points.map((el,i) => (<span key={i} >{formatter.format(el).replace(/\D00$/, '')}{i == points.length-1 ? '+' : ''}</span>))}
+                {points.map((el,i) => (<span key={i} >{formatter.format(el).replace(/\D00$/, '')}{i === points.length-1 ? '+' : ''}</span>))}
             </div>
             </div>
         </div>

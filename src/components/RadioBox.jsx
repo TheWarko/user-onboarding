@@ -1,7 +1,6 @@
-import {useRef} from 'react'
+// import {useRef} from 'react'
 //Styles
 import stylesRadiobox from '../assets/styles/RadioBox.module.scss'
-import stylesForm from '../assets/styles/Form.module.scss'
 
 
 const RadioBox = ({ id, children, register, ...inputProps }) => {
