@@ -1,13 +1,13 @@
+@import './_config.scss';
+
 .checklist{
 
     list-style-type: none;
-
     .checkboxWrapper{
         width: 28px;
         display: inline-block;
         margin-right: 6px;
     }
-
     .checkbox{
         display: inline-block;
         width: 22px;
@@ -26,7 +26,6 @@
             border-radius: 2px;
         }
     }
-
     .pathline{
         display: block;
         width: 2px;
@@ -35,7 +34,6 @@
         border-radius: 4px;
         margin: 6px 13px;
     }
-
     li{
         opacity: 0.5;
         &.active{

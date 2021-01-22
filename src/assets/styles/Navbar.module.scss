@@ -1,6 +1,5 @@
 @import './_config.scss';
 
-
 .navbar{
     margin-top:32px;
     &__left{
@@ -10,6 +9,14 @@
     &__right{
         display: flex;
         justify-content: space-between;
+        @include medium{
+            display: block;
+            text-align: right;
+            button{
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
     }
     @include medium{
         display: flex;

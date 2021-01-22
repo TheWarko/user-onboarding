@@ -1,6 +1,5 @@
 @import './_config.scss';
 
-
 body{
     .defaultbutton{
         height: 40px;
@@ -20,14 +19,14 @@ body{
     .button{
         @extend .defaultbutton;
         color: #fff;
-        background-color: #4c9ff1;
+        background-color: $primary_color;
         &:hover{
-            background-color: darken(#4c9ff1,2%);
+            background-color: darken($primary_color,2%);
         }
     }
     .buttonLight{
         @extend .defaultbutton;
-        color: #4c9ff1;
+        color: $primary_color;
         background-color: #edf5fe;
         &:hover{
             background-color: darken(#edf5fe,1%);

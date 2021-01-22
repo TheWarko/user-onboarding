@@ -48,7 +48,7 @@ const Step1 = (props) => {
     }
 
     return (
-        <div>
+        <div className={props.className}>
             <Titletext className={stylesSpacing.mb48} title={texts.contact.title} >
                 {texts.contact.intro}
             </Titletext>

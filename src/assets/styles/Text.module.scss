@@ -1,3 +1,5 @@
+@import './_config.scss';
+
 .twocolors{
     font-size: 26px;
     span{
@@ -23,9 +25,9 @@
     .alignLeft{text-align: left;}
     .alignRight{text-align: right;}
     .alignLeftOnlyDesktop{
-        @media (min-width: 667px) {text-align: left;}
+        @include medium{text-align: left;}
     }
     .alignRightOnlyDesktop{
-        @media (min-width: 667px) {text-align: right;}
+        @include medium{text-align: right;}
     }
 }

@@ -1,11 +1,13 @@
+@import './_config.scss';
+
 .radiobox{
     border: 1px solid #ccc;
     padding: 14px;
     border-radius: 3px;
     &:focus-within{
-        border: 1px solid #00a1f5;
-        color: #00a1f5;
-        background-color: lighten(#00a1f5, 50%)
+        border: 1px solid $primary_color;
+        color: $primary_color;
+        background-color: lighten($primary_color, 50%)
     }
     label{
         display: inline-block;

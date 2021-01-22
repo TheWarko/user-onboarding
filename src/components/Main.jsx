@@ -20,9 +20,9 @@ const Main = () => {
                 <Headbar />
                 {
                     {
-                        1: <Step1 />,
-                        2: <Step2 />,
-                        3: <Step3 />
+                        1: <Step1 className={stylesMain.wrapper} />,
+                        2: <Step2 className={stylesMain.wrapper} />,
+                        3: <Step3 className={stylesMain.wrapper} />
                     }[step]
                 }
                 <Navbar />

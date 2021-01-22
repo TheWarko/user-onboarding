@@ -1,5 +1,7 @@
+@import './_config.scss';
+
 .arrowlink{
-    color: #4c9ff1;
+    color: $primary_color;
     text-decoration: none;
     background-color: transparent;
     border: 0;

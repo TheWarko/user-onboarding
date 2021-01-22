@@ -45,14 +45,14 @@ const Step1 = (props) => {
     }
 
     return (
-        <div>
+        <div className={props.className}>
             <Titletext className={stylesSpacing.mb48} title={texts.invesmentplans.title} >
                 {texts.invesmentplans.intro}
             </Titletext>
 
             <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
                 <Grid>
-                    <Row>
+                    <Row className={stylesSpacing.mb16} >
                         <Col xs>
                             <p className={stylesText.stegosaurus} >How much are you planning to invest in this year?</p>
                         </Col>
@@ -69,7 +69,7 @@ const Step1 = (props) => {
                             <span className={stylesForm.error}>{errors.to && "From price name is required"}</span>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className={stylesSpacing.mb32}>
                         <Col xs>
                             <PriceBar className={stylesSpacing.mb32} start={valueFrom} end={valueTo} />
                         </Col>

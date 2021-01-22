@@ -33,7 +33,7 @@ const Step1 = (props) => {
     }
 
     return (
-        <div>
+        <div className={props.className}>
             <Titletext className={stylesSpacing.mb48} title={texts.invesmentpreferences.title} >
                 {texts.invesmentpreferences.intro}
             </Titletext>
@@ -45,31 +45,31 @@ const Step1 = (props) => {
                             <p className={stylesText.stegosaurus} >What kind of real estate are you interested in?</p>
                         </Col>
                     </Row>
-                    <Row className={stylesForm.fields} >
-                        <Col xs={3} md={3}>
+                    <Row className={stylesForm.smallfields} >
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="single_family" id="single_family" register={register({ validate: v => v.length > 0 })}>Single family</CheckboxBox>
                         </Col>
-                        <Col xs={3} md={3}>
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="residential_multifamily" id="residential_multifamily" register={register({ validate: v => v.length > 0 })}>Residential multifamily</CheckboxBox>
                         </Col>
-                        <Col xs={3} md={3}>
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="commercial_retail" id="commercial_retail" register={register({ validate: v => v.length > 0 })}>Commercial retail</CheckboxBox>
                         </Col>
-                        <Col xs={3} md={3}>
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="commercial_industrial" id="commercial_industrial" register={register({ validate: v => v.length > 0 })}>Commercial industrial</CheckboxBox>
                         </Col>
                     </Row>
-                    <Row className={stylesForm.fields} >
-                        <Col xs={3} md={3}>
+                    <Row className={stylesForm.smallfields} >
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="commercial_hospitality" id="commercial_hospitality" register={register({ validate: v => v.length > 0 })}>Commercial hospitality</CheckboxBox>
                         </Col>
-                        <Col xs={3} md={3}>
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="commercial_warehousing" id="commercial_warehousing" register={register({ validate: v => v.length > 0 })}>Commercial warehousing</CheckboxBox>
                         </Col>
-                        <Col xs={3} md={3}>
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="commercial_office" id="commercial_office" register={register({ validate: v => v.length > 0 })}>Commercial office</CheckboxBox>
                         </Col>
-                        <Col xs={3} md={3}>
+                        <Col xs={6} md={3}>
                             <CheckboxBox name="preferences" value="other" id="other" register={register({ validate: v => v.length > 0 })}>Other</CheckboxBox>
                         </Col>
                     </Row>
