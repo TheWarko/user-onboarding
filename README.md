@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# User-onBoarding
+
+A simple project to learn and improve my javascript with ReactJs.\
+Libraries and Plugins used:
+* create-react-app
+* axios
+* node-sass
+* react-flexbox-grid
+* react-hook-form
+
+<br />
+<br />
+<br />
+<br />
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
