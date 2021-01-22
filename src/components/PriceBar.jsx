@@ -17,9 +17,13 @@ const PriceBar = (props) => {
     const [endBar,setEndBar] = useState(0)
 
     useEffect(() => {
+        setStartBar(0)
         points.forEach((point,i) => {if(start >= point) { setStartBar(i) }} )
+    },[start]);
+    useEffect(() => {
+        setEndBar(1)
         points.forEach((point,i) => {if(end >= point) { setEndBar(i) }} )
-    },[]);
+    },[end]);
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',

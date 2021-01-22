@@ -1,4 +1,4 @@
-import {useContext,useRef} from 'react'
+import {useContext, useState} from 'react'
 import StepContext from '../contexts/StepContext'
 import { useForm } from "react-hook-form"
 import { Grid, Row, Col } from 'react-flexbox-grid'
@@ -34,8 +34,15 @@ const Step1 = (props) => {
         nextStep()
     }
 
-    // const startBar = useRef(0)
-    // const endBar = useRef(0)
+    // Price&bar
+    const [valueFrom,setValueFrom] = useState(10000)
+    const [valueTo,setValueTo] = useState(500000)
+    const fromChanged = (event) => {
+        setValueFrom(event.target.value)
+    }
+    const toChanged = (event) => {
+        setValueTo(event.target.value)
+    }
 
     return (
         <div>
@@ -53,18 +60,18 @@ const Step1 = (props) => {
                     <Row className={stylesForm.fields} >
                         <Col xs={12} md={6}>
                             <label htmlFor="from">From</label>
-                            <PriceInput name="from" id="from" min="10000" max="500000" register={register({ required: true })} />
+                            <PriceInput name="from" id="from" min="10000" max="500000" value={valueFrom} onChange={fromChanged} register={register({ required: true })} />
                             <span className={stylesForm.error}>{errors.from && "From price name is required"}</span>
                         </Col>
                         <Col xs={12} md={6}>
                             <label htmlFor="to">To</label>
-                            <PriceInput name="to" id="to" min="50000" register={register({ required: true })} />
+                            <PriceInput name="to" id="to" min="50000" value={valueTo} onChange={toChanged} register={register({ required: true })} />
                             <span className={stylesForm.error}>{errors.to && "From price name is required"}</span>
                         </Col>
                     </Row>
                     <Row>
                         <Col xs>
-                            <PriceBar className={stylesSpacing.mb32} start={12000} end={500000} />
+                            <PriceBar className={stylesSpacing.mb32} start={valueFrom} end={valueTo} />
                         </Col>
                     </Row>
                     <Row>

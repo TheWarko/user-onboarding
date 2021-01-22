@@ -8,7 +8,7 @@ const PriceInput = (props) => {
     ...inputProps
   } = props
 
-  const [value,setValue] = useState(null)
+  // const [value,setValue] = useState(null)
   const [isEditing,setIsEditing] = useState(false)
 
   const formatter = new Intl.NumberFormat('en-US', {
@@ -27,20 +27,20 @@ const PriceInput = (props) => {
         ref={register}
         {...inputProps} 
         onBlur={toggleEditing}
-        value={value}
+        value={props.value}
         placeholder="$0,00"
-        onChange={(event) => {
-          setValue(event.target.value)
-        }}
-        // onChange={onChange}
+        // onChange={(event) => {
+        //   setValue(event.target.value)
+        // }}
+        onChange={props.onChange}
       />
     ) : (
       <input 
         type="text"
         ref={register}
         {...inputProps} 
-        value={formatter.format(value)}
-        placeholder="0,00 €"
+        value={formatter.format(props.value)}
+        placeholder="$0,00"
         onFocus={toggleEditing}
         readOnly
       />
