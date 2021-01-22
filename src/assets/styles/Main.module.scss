@@ -1,0 +1,16 @@
+@import './_config.scss';
+
+.main{
+    grid-area: main;
+}
+
+.container{
+    padding: 20px;
+    @include medium{ 
+        padding: 3.5vh 8vw;
+        .wrapper{
+            min-height: 70vh;
+            max-width: 86%;
+        }
+    }
+}

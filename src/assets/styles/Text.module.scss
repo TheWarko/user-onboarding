@@ -1,0 +1,33 @@
+@import './_config.scss';
+
+.twocolors{
+    font-size: 26px;
+    span{
+        text-transform: uppercase;
+        color: #a1cff9;
+    }
+}
+
+.trex{
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 16px;
+}
+.stegosaurus{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+:global {
+    .alignLeft{text-align: left;}
+    .alignRight{text-align: right;}
+    .alignLeftOnlyDesktop{
+        @include medium{text-align: left;}
+    }
+    .alignRightOnlyDesktop{
+        @include medium{text-align: right;}
+    }
+}

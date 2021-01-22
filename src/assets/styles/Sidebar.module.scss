@@ -1,0 +1,19 @@
+@import './_config.scss';
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: $primary_color;
+    color: #fff;
+    .container{
+        padding: 20px;
+        @include medium{ padding: 3.5vh 40px; }
+        display: grid;
+    }
+    &__quotes{
+        @include large{
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}
+

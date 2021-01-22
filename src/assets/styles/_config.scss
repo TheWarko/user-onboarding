@@ -1,0 +1,14 @@
+@mixin medium {
+    @media (min-width: 667px) {
+        @content;
+    }
+}
+@mixin large {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+$smallspacer : 0.75;
+$mediumspacer : 0.90;
+$primary_color : #4c9ff1;

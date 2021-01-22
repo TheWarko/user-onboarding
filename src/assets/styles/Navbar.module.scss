@@ -1,0 +1,38 @@
+@import './_config.scss';
+
+.navbar{
+    margin-top:32px;
+    &__left{
+        text-align: center;
+        margin: 16px;
+    }
+    &__right{
+        display: flex;
+        justify-content: space-between;
+        @include medium{
+            display: block;
+            text-align: right;
+            button{
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
+    }
+    @include medium{
+        display: flex;
+        &__left{
+            margin: auto;
+            text-align: left;
+            flex-basis: 50%;
+            max-width: 50%;
+            display: flex;
+            align-items: center;
+        }
+        &__right{
+            flex-basis: 50%;
+            max-width: 50%;
+            align-items: flex-end;
+        }
+    }
+
+}

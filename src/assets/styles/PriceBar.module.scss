@@ -1,0 +1,97 @@
+@import './_config.scss';
+
+.pricebar{
+    width: 100%;
+    position: relative;
+    padding-top: 16px;
+    .backgroundBar{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        & > span {
+            flex-basis: 20%;
+            width: 20%;
+            height: 4px;
+            background-color: #eaf0f6;
+            position: relative;
+            &:after{
+                height: 14px;
+                width: 4px;
+                background-color: #eaf0f6;
+                content:"";
+                position: absolute;
+                top: -5px;
+                right: 0;
+            }
+            &:first-child{
+                &:before{
+                    height: 14px;
+                    width: 4px;
+                    background-color: #eaf0f6;
+                    content:"";
+                    position: absolute;
+                    top: -5px;
+                    left: 0;
+                } 
+            }
+        }
+    }
+    .activeBar{
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        // padding-left:20%;
+        display: flex;
+        & > span {
+            // display: none;
+            flex-basis: 20%;
+            width: 20%;
+            height: 4px;
+            background-color: $primary_color;
+            position: relative;
+            // &.active{ display: block; }
+            &:after{
+                height: 14px;
+                width: 4px;
+                background-color: $primary_color;
+                content:"";
+                position: absolute;
+                top: -5px;
+                right: 0;
+            }
+            &:first-child{
+                &:before{
+                    height: 14px;
+                    width: 14px;
+                    background-color: $primary_color;
+                    content:"";
+                    position: absolute;
+                    top: -5px;
+                    left: -6px;
+                } 
+            }
+            &:last-child{
+                &:after{
+                    height: 14px;
+                    width: 14px;
+                    background-color: $primary_color;
+                    content:"";
+                    position: absolute;
+                    top: -5px;
+                    right: 0;
+                } 
+            }
+        }
+    }
+}
+
+.labels{
+    display: flex;
+    margin-left: -10%;
+    width: 120%;
+    padding-top: 32px;
+    span{
+        text-align: center;
+        flex-basis: 20%;
+    } 
+}
