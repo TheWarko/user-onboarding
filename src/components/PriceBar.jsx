@@ -12,7 +12,6 @@ const PriceBar = (props) => {
     } = props
 
     const points = [10000,50000,100000,200000,500000,1000000]
-
     const [startBar,setStartBar] = useState(0)
     const [endBar,setEndBar] = useState(0)
 
@@ -21,7 +20,7 @@ const PriceBar = (props) => {
         points.forEach((point,i) => {if(start >= point) { setStartBar(i) }} )
     },[start]);
     useEffect(() => {
-        setEndBar(1)
+        setEndBar(0)
         points.forEach((point,i) => {if(end >= point) { setEndBar(i) }} )
     },[end]);
 
@@ -41,12 +40,12 @@ const PriceBar = (props) => {
                     <span></span>
                 </div>
                 <div className={stylesPriceBar.activeBar} style={{ paddingLeft: startBar > 0 ? `${startBar*20}%`: '0'}} >
-                    { [...Array(endBar - startBar)].map((e, i) => <span key={i}></span>) }
+                    { endBar > startBar ? [...Array(endBar-startBar)].map((e, i) => <span key={i}></span>) : null }
                 </div>
             </div>
             <div>
             <div className={stylesPriceBar.labels}>
-                {points.map((el,i) => (<span key={i} >{formatter.format(el).replace(/\D00$/, '')}</span>))}
+                {points.map((el,i) => (<span key={i} >{formatter.format(el).replace(/\D00$/, '')}{i == points.length-1 ? '+' : ''}</span>))}
             </div>
             </div>
         </div>
