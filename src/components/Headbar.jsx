@@ -16,7 +16,7 @@ const Headbar = (props) => {
 
             <Grid>
                 <Row>
-                    <Col xs={12} lg={5}>
+                    <Col xs={12} lg={5} data-testid="stepOf" >
                         STEP {step} OF 3
                     </Col>
                     <Col xs={12} lg={7} className="alignRightOnlyDesktop" >
