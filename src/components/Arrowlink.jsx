@@ -9,12 +9,13 @@ const Arrowlink = (props) => {
         onClick,
         children,
         prev,
-        next
+        next,
+        dataTestIdChild
     } = props
 
     return (
         <>
-            <button onClick={onClick} className={stylesArrowlink.arrowlink} >{prev && `← ` }{children}{next && ` →` }</button>
+            <button onClick={onClick} className={stylesArrowlink.arrowlink}  data-testid={dataTestIdChild} >{prev && `← ` }{children}{next && ` →` }</button>
         </>
     )
 
