@@ -53,7 +53,7 @@ const Step1 = (props) => {
                 {texts.contact.intro}
             </Titletext>
 
-            <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} >
+            <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} autocomplete="off" >
                 <Grid>
                     <Row className={stylesForm.fields} >
                         <Col xs={12} md={6}>

@@ -1,7 +1,11 @@
 # User-onBoarding
 
-A simple project to learn and improve my javascript with ReactJs.\
-Libraries and Plugins used:
+A simple project to learn and improve my javascript with ReactJs.
+
+![](https://tender-swartz-f6eaef.netlify.app/preview.gif)
+
+
+## Technologies
 * create-react-app
 * node-sass
 * css-modules
@@ -11,17 +15,11 @@ Libraries and Plugins used:
 * postman mock API
 * testing-library
 
-# Demo
+## Demo
 Here the [demo link](https://tender-swartz-f6eaef.netlify.app/).
 
 <br />
 <br />
-<br />
-<br />
-
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
