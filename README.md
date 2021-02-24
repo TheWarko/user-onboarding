@@ -9,6 +9,10 @@ Libraries and Plugins used:
 * react-hook-form
 * axios
 * postman mock API
+* testing-library
+
+# Demo
+Here the [demo link](https://tender-swartz-f6eaef.netlify.app/).
 
 <br />
 <br />
