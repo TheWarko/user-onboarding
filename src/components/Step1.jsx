@@ -16,10 +16,18 @@ import texts from '../texts/texts'
 const Step1 = (props) => {
 
     const [datas,setDatas] = useState({})
+    const [phonenumber,setPhonenumber] = useState(datas && datas.phone ? datas.phone : '')
+    const [fullnameinput,setFullnameinput] = useState(datas && datas.fullname ? datas.fullname : '')
 
     useEffect(() => {
         setDatas(JSON.parse(localStorage.getItem('data')))
     },[]);
+    useEffect(() => {
+        if(datas){
+            setPhonenumber(datas.phone)
+            setFullnameinput(datas.fullname)
+        }
+    },[datas]);
 
     // Steps Context
     const [step,setStep] = useContext(StepContext);
@@ -46,6 +54,18 @@ const Step1 = (props) => {
             console.log(error);
         });
     }
+    const inputOnlyNumbers = (e) =>{
+        const re = /^[0-9\b]+$/;
+        if (e.target.value === '' || re.test(e.target.value)) {
+            setPhonenumber(e.target.value)
+        }
+     }
+    const inputOnlyChars = (e) =>{
+        const re = /^[A-Z a-z\b]+$/;
+        if (e.target.value === '' || re.test(e.target.value)) {
+            setFullnameinput(e.target.value)
+        }
+     }
 
     return (
         <div className={props.className}>
@@ -53,17 +73,33 @@ const Step1 = (props) => {
                 {texts.contact.intro}
             </Titletext>
 
-            <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} autocomplete="off" >
+            <form id="hook-form" onSubmit={handleSubmit(onSubmit)} className={stylesForm.form} autoComplete="off" >
                 <Grid>
                     <Row className={stylesForm.fields} >
                         <Col xs={12} md={6}>
                             <label htmlFor="fullname">Full name</label>
-                            <input type="text" name="fullname" defaultValue={datas ? datas.fullname : ''} ref={register({ required: true })} />
+                            <input 
+                                type="text" 
+                                name="fullname" 
+                                data-testid="fullname" 
+                                onChange={inputOnlyChars}
+                                defaultValue={datas ? datas.fullname : ''} 
+                                value={fullnameinput ? fullnameinput : ''}
+                                ref={register({ required: true })} 
+                            />
                             <span className={stylesForm.error}>{errors.fullname && "Full name is required"}</span>
                         </Col>
                         <Col xs={12} md={6}>
                             <label htmlFor="phone">Phone</label>
-                            <input type="tel" name="phone" defaultValue={datas ? datas.phone : ''}  ref={register({ required: true, pattern: /^[0-9]*$/ })} />
+                            <input 
+                                type="tel" 
+                                name="phone" 
+                                data-testid="phone" 
+                                ref={register({ required: true, pattern: /^[0-9]*$/ })} 
+                                onChange={inputOnlyNumbers}
+                                defaultValue={datas ? datas.phone : phonenumber}  
+                                value={phonenumber ? phonenumber : ''}
+                            />
                             <span className={stylesForm.error}>{errors.phone && "Phone is required and accepts only numbers"}</span>
                         </Col>
                     </Row>
